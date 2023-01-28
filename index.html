@@ -1,0 +1,34 @@
+<html>
+<head>
+	<link rel="stylesheet" href="styles.css">
+	<meta charset="utf-8">
+	<title>Youtube To Mp3</title>
+</head>
+<body>
+
+<div style="text-align:center">
+    <img src="https://i.ibb.co/vZNg5dB/clipart2024576.png" style="width: 25%; "alt="Logo">
+</div>
+<form id="form" method="GET" action="https://convert2mp3s.com/api/widget" onsubmit="return validateUrl()">
+        <input id="url" name="url" placeholder="Youtube Url">
+        <br/>
+        <br/>
+        <input type="submit" value="Convert now!">
+    </form>
+<script>
+  function validateUrl() {
+    var url = document.getElementById("url").value;
+    var pattern = /^(https?:\/\/)?(www\.)?youtube\.com\/watch\?v=[a-zA-Z0-9-_]+/;
+    if(!pattern.test(url)) {
+        alert("Please enter a valid YouTube URL");
+        return false;
+    }
+    return true;
+  }
+</script>
+
+<footer>
+  <p style="color: black;">This site was made with ❤️ by Chris Knoop</p>
+</footer>
+</body>
+</html>
